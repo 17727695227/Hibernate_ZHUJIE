@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+
+		<property name="connection.url">jdbc:mysql://localhost:3306/hibernate?characterEncoding=UTF-8
+		</property>
+		
+		
+		<property name="connection.username">root</property>
+		<property name="connection.password">123456</property>
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<!-- 显示sql语句 -->
+		<property name="show_sql">true</property>		 
+        <!-- 格式化查询 -->
+        <property name="format_sql">true</property>
+        <!-- 自动更新数据库 -->
+        <property name="hbm2ddl.auto">update</property>
+  
+       <property name="hibernate.current_session_context_class">thread</property>
+       
+       
+      <!-- 
+      <mapping class="s03.oto.fk.People"/>
+      <mapping class="s03.oto.fk.IdCard"/>
+       -->
+      <!--  
+      <mapping class="s03.oto.bfk.People"/>
+      <mapping class="s03.oto.bfk.IdCard"/>
+       	 -->
+      <!--  	 
+      <mapping class="s03.mto.fk.Students"/>
+      <mapping class="s03.mto.fk.ClassRoom"/>
+       	 --> 
+       <!-- 	 
+      <mapping class="s03.otm.fk.Students"/>
+      <mapping class="s03.otm.fk.ClassRoom"/>
+      	  -->
+      <!-- 	 
+      <mapping class="s03.otm.bfk.Students"/>
+      <mapping class="s03.otm.bfk.ClassRoom"/>
+       -->	 
+      <!--  
+      <mapping class="s03.mtm.fk.Students"/>
+      <mapping class="s03.mtm.fk.Teachers"/>
+       	  -->
+      <mapping class="s03.mtm.bfk.Students"/>
+      <mapping class="s03.mtm.bfk.Teachers"/>
+       	 
+	</session-factory>
+
+</hibernate-configuration>
